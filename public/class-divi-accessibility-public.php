@@ -405,11 +405,11 @@ class Divi_Accessibility_Public {
 
 			$class_list = '';
 
-			if( isset( $element->props['hide_aria_element'] ) && $element->props['hide_aria_element'] === 'on' ) {
-				$class_list .= ' aria-hidden';
+			if (isset($element->props['hide_aria_element']) && $element->props['hide_aria_element'] === 'on') {
+    				$class_list .= ' aria-hidden';
 			}
-			if( isset( $element->props['show_for_screen_readers_only'] ) && $element->props['show_for_screen_readers_only'] === 'on' ) {
-				$class_list .= ' screen-reader-text';
+			if (isset($element->props['show_for_screen_readers_only']) && $element->props['show_for_screen_readers_only'] === 'on') {
+    				$class_list .= ' screen-reader-text';
 			}
 			if ( $class_list ) {
 				$output = preg_replace('/class=\"(.*?)\"/', 'class="$1' . $class_list . '"', $output, 1);
